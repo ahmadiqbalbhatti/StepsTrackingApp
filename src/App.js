@@ -9,9 +9,9 @@ function App() {
 
     const buttonStyle = {backgroundColor: '#7950f2', color: '#fff'}
 
-    const handlePrevious = (event) => step > 1 && setStep(step - 1);
-    const handleNext = (event) => step < 3 && setStep(step + 1);
-    const handleIsOpen = (event) => setIsOpen(!isOpen);
+    const handlePrevious = (event) => step > 1 && setStep( step =>step - 1);
+    const handleNext = (event) => step < 3 && setStep(step =>step + 1);
+    const handleIsOpen = (event) => setIsOpen(isOpen => !isOpen);
 
     return (<>
             <button type={"button"} className={"close"  } onClick={handleIsOpen}>&times;</button>
